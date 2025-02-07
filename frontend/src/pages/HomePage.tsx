@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
-import { fetchStocks, fetchStockGraphData } from '../features/stocks/stocksThunks';
+import { fetchStocks, fetchStockGraphData } from '../stocks/stocksThunks';
 import StockDropdown from '../components/StockDropdown';
 import DurationSwitcher from '../components/DurationSwitcher';
 import StockGraph from '../components/StockGraph';

@@ -1,9 +1,9 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { StockGraphData, StocksState } from './types';
-import { AppDispatch, RootState } from '../../store';
+import { StockGraphData, StocksState } from '../stocks/types';
+import { AppDispatch, RootState } from '../store';
+import { setLoading,setStocks,setGraphData } from './stocksSlice';
 
-// Fetch stocks
 export const fetchStocks = createAsyncThunk(
   'stocks/fetchStocks',
   async (_, { dispatch }) => {
@@ -12,7 +12,6 @@ export const fetchStocks = createAsyncThunk(
   }
 );
 
-// Fetch stock graph data
 export const fetchStockGraphData = createAsyncThunk(
   'stocks/fetchStockGraphData',
   async (_, { dispatch, getState }) => {
@@ -38,7 +37,6 @@ export const fetchStockGraphData = createAsyncThunk(
       );
 
       if (response.data.length < 100) {
-        // Simulate polling until all data is fetched
         setTimeout(poll, 1000);
       } else {
         dispatch(setLoading(false));

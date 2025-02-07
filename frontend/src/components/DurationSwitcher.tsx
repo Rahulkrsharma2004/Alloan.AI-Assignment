@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store';
-import { setSelectedDuration } from '../../features/stocks/stocksSlice';
+import { useAppDispatch, useAppSelector } from '../store';
+import { setSelectedDuration } from '../stocks/stocksSlice';
 
 const DurationSwitcher: React.FC = () => {
   const dispatch = useAppDispatch();

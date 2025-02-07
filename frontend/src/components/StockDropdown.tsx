@@ -1,6 +1,6 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '../../store';
-import { setSelectedStockId } from '../../features/stocks/stocksSlice';
+import { useAppDispatch, useAppSelector } from '../store';
+import { setSelectedStockId } from '../stocks/stocksSlice';
 
 const StockDropdown: React.FC = () => {
   const dispatch = useAppDispatch();
